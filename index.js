@@ -1,3 +1,5 @@
+//Codigo para reemplazar las imagenes entre si
+
 let unoBtn = document.getElementById("uno");
 let dosBtn = document.getElementById("dos");
 let tresBtn = document.getElementById("tres");
