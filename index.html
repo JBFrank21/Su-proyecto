@@ -1,5 +1,5 @@
-<!--Integrantes del grupo
-Frank Stid Jimenez Benavides-->
+<!--Integrantes del grupo-->
+<!--Frank Stid Jimenez Benavides-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,15 +17,57 @@ Frank Stid Jimenez Benavides-->
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Librerias</a></li>
         <li><a href="#">Acerca</a></li>
+        <li><div class="box">
+            <input type="text" name="Buscar" placeholder="  Que quieres leer?" class="src" outocomplete="off">
+        </div></li>
         <li class="item-r"><a href="#">Registrarse</a></li>
         <li class="item-r"><a href="#">Iniciar sesión</a></li>
     </ul>
-    <h1 class="h1"> Libreria</h1>
-            <div class="info">
-                <section class="card">
-                    <div class="card_img"></div>
-                    <main class="card_cont">
-                        <h1 class="card_cont_title">Titulo del libro</h1>
+    
+    <div class="slide">
+        <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" 
+                  name="slide" aria-hidden="true" hidden="" checked="checked">
+            <div class="slide-item">
+                <img src="img/descarga.jpeg">
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="img/descarga (1).jpeg">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="img/descarga (2).jpeg">
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+            <ol class="slide-indicador">
+                <li>
+                    <label for="slide-1" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-2" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-3" class="slide-circulo">•</label>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    
+    <div class="info">
+        <section class="card">
+            <div class="card_img"></div>
+                <main class="card_cont">
+                    <h1 class="card_cont_title">Titulo del libro</h1>
                         <p class="card_cont_descr">Caracteristicas del libro</p>
                         <div class="card_cont_aut">
                             <img class="card_cont_aut_img"src="https://cdn.icon-icons.com/icons2/1097/PNG/512/1485477097-avatar_78580.png" alt="autor">
@@ -34,10 +76,9 @@ Frank Stid Jimenez Benavides-->
                                 <p class="card_content_profile_date">Fecha de pucliación</p>
                             </div>
                         </div>
-                    </main>
-                </section>       
-            </div>
-        </div>
+                </main>
+        </section>       
+    </div>
         <h2 class="h2">Seleccione las imagenes para intercalarlas</h2>
     <div class="cont">
         <img id="uno" class="img01" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQtIgatTNa8_xY8C3aeGu2Bh2TpHHMhr2Z2GMMMFfRQCoWNb7W1">
