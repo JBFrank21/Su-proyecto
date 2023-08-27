@@ -20,3 +20,4 @@ tresBtn.onclick=function(){
 cuatroBtn.onclick=function(){
     dos.src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQtIgatTNa8_xY8C3aeGu2Bh2TpHHMhr2Z2GMMMFfRQCoWNb7W1";
 }
+

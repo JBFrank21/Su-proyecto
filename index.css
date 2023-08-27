@@ -5,6 +5,13 @@ body{
 }
 /*Creación de Menu */
 .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    transition: 0.7s;
+
+
     list-style: none;
     padding: 0;
     background: #17323b;
@@ -35,33 +42,29 @@ body{
 /*presentacion de imagenes*/
 
 .slide {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
+    
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.564);
+    margin-top: 66px;
 }
 .slide-inner {
-    position: relative;
+    
     overflow: hidden;
     width: 100%;
-    height: calc( 300px + 3em);
+    height: calc( 350px + .6em);
 }
 .slide-open:checked + .slide-item {
     position: static;
-    opacity: 100;
+    opacity: 1000;
 }
 .slide-item {
     position: absolute;
     opacity: 0;
     -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
+    transition: opacity .1s ease-out;
 }
-.slide-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
+
 .slide-control {
-    background: rgba(0, 0, 0, 0.28);
+    background: rgba(0, 0, 0, 0.58);
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
@@ -70,7 +73,7 @@ body{
     height: 40px;
     line-height: 35px;
     position: absolute;
-    top: 50%;
+    top: 250px;
     -webkit-transform: translate(0, -50%);
     cursor: pointer;
     -ms-transform: translate(0, -50%);
@@ -87,7 +90,7 @@ body{
 }
 .slide-control:hover {
     background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
+    color: #aaaaaa  ;
 }
 #slide-1:checked ~ .control-1,
 #slide-2:checked ~ .control-2,
@@ -99,6 +102,7 @@ body{
     margin: 0;
     padding: 0;
     position: absolute;
+    top: 360px;
     bottom: 2%;
     left: 0;
     right: 0;
@@ -110,13 +114,13 @@ body{
     margin: 0 5px;
 }
 .slide-circulo {
-    color: #828282;
+    color: #a6c5c3;
     cursor: pointer;
     display: block;
     font-size: 35px;
 }
 .slide-circulo:hover {
-    color: #aaaaaa;
+    color: #53dbdb;
 }
 #slide-1:checked ~ .control-1 ~ .slide-indicador 
      li:nth-child(1) .slide-circulo,
@@ -124,20 +128,15 @@ body{
       li:nth-child(2) .slide-circulo,
 #slide-3:checked ~ .control-3 ~ .slide-indicador 
       li:nth-child(3) .slide-circulo {
-    color: #428bca;
+    color: #26A69A;
 }
-#titulo {
+
+.img02{
     width: 100%;
-    position: absolute;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 27px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-         -1px 0px 2px rgba(255, 255, 255, 0);
+    margin: 3px;
+    display: flex;
+    height: 353px;
+    max-width: 100%;
 }
 /*Configuración buscar*/
 
@@ -170,7 +169,7 @@ input.src:hover{
 .img01{
     width: 250px;
     height: 380px;
-    
+    border-radius: 25px;
     margin: 5px;
 }
 
