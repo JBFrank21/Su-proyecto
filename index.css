@@ -5,6 +5,13 @@ body{
 }
 /*Creación de Menu */
 .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    transition: 0.7s;
+
+
     list-style: none;
     padding: 0;
     background: #17323b;
@@ -32,139 +39,104 @@ body{
 .item-r{
     float: right;
 }
+/*presentacion de imagenes*/
 
-/*Configuración de la imagenes que cambian*/
-
-.img01{
-    width: 250px;
-    height: 380px;
-    border-radius: 25px;
-    margin: 5px;
+.slide {
+    
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.564);
+    margin-top: 66px;
+}
+.slide-inner {
+    
+    overflow: hidden;
+    width: 100%;
+    height: calc( 350px + .6em);
+}
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 1000;
+}
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity .1s ease-out;
 }
 
-/*estilos de footer*/
-.cont{
-    display: flex;
-    justify-content: center;
+.slide-control {
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 50%;
+    color: #fff;
     cursor: pointer;
-
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 250px;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
 }
-
-*{
+.slide-control.prev {
+    left: 2%;
+}
+.slide-control.next {
+    right: 2%;
+}
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa  ;
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+.slide-indicador {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer{
-    background-color: #17323b;
-    padding: 80px 0;
-}
-
-.footer-row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-links{
-    width: 25%;
-    padding: 0 15px;
-}
-
-.footer-links h4{
-    font-size: 20px;
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid lightseagreen;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.footer-links ul li a{
-    font-size: 18px;
-    text-decoration: none;
-    color: gray;
-    display: block;
-    margin-bottom: 15px;
-    transition: all .3s ease;
-}
-
-.footer-links ul li a:hover{
-    color: white;
-    padding-left: 6px;
-}
-
-.social-link a{
-    display: inline-block;
-    min-height: 40px;
-    width: 40px;
-    background-color: rgb(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    position: absolute;
+    top: 360px;
+    bottom: 2%;
+    left: 0;
+    right: 0;
     text-align: center;
-    line-height: 40px;
-    border-radius: 50px;
-    color: white;
-    transition: all .5s ease;
+    z-index: 10;
+}
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slide-circulo {
+    color: #a6c5c3;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+.slide-circulo:hover {
+    color: #53dbdb;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: #26A69A;
 }
 
-.social-link a:hover{
-    background-color: #26A69A;
-}
-
-.info{
+.img02{
+    width: 100%;
+    margin: 3px;
     display: flex;
-}
-
-/*Estilo de carta donde se muestra la información*/
-.card{
-    border: 1px;
-    background-color: #E8EAF6;
-    display: flex;
-    width: 535px;
-    height: 280px;
-    margin: 45px auto;
-    border-radius: 25px;
-    
-}
-
-.card_img{
-    background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQtIgatTNa8_xY8C3aeGu2Bh2TpHHMhr2Z2GMMMFfRQCoWNb7W1);
-    width: 200px;
-    height: 100%;
-    border-radius: 25px 0 0 25px;
-    background-size: cover;
-}
-
-.card_cont_title{
-    color: #17323b;
-    margin: 30px 30px 12px; 
-    font-size: 1.24em;
-    line-height: 24px;
-}
-
-.card_cont_descr{
-    color: black;
-    margin: 0 42px 30px 30px;
-    font-size: 1em;
-}
-
-.card_cont_aut{
-    display: flex;
-    margin: 0 30px;
-}
-
-.card_cont_aut_img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-
+    height: 353px;
+    max-width: 100%;
 }
 
 /*Estilo de titulo H1*/
@@ -186,3 +158,4 @@ body{
     text-align: center;
     margin: 20px;
 }
+
